@@ -1,14 +1,17 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { ExternalLink } from "lucide-react"
-import { GithubIcon } from "@/lib/icons"
-import { PROJECTS } from "@/lib/data"
-import SectionHeading from "./SectionHeading"
+import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
+import { GithubIcon } from "@/lib/icons";
+import { PROJECTS } from "@/lib/data";
+import SectionHeading from "./SectionHeading";
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="relative py-24 md:py-32 bg-zinc-50/50 dark:bg-white/[0.02]">
+    <section
+      id="portfolio"
+      className="relative py-24 md:py-32 bg-zinc-50/50 dark:bg-white/[0.02]"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Portofolio"
@@ -50,13 +53,13 @@ export default function Portfolio() {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <a
+                  {/* <a
                     href={project.demoUrl}
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
                   >
                     <ExternalLink size={14} />
                     Demo
-                  </a>
+                  </a> */}
                   <a
                     href={project.githubUrl}
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-muted dark:text-zinc-400 hover:text-primary transition-colors"
@@ -71,5 +74,5 @@ export default function Portfolio() {
         </div>
       </div>
     </section>
-  )
+  );
 }
