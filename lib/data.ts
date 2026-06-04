@@ -119,15 +119,15 @@ export const PROJECTS: Project[] = [
     demoUrl: "#",
     githubUrl: "#",
   },
-  // {
-  //   title: "Portofolio Freelancer",
-  //   description:
-  //     "Website portofolio personal dengan animasi halus dan desain premium.",
-  //   tech: ["Next.js", "Framer Motion"],
-  //   image: "/project-placeholder.svg",
-  //   demoUrl: "#",
-  //   githubUrl: "#",
-  // },
+  {
+    title: "Website Rental Mobil",
+    description:
+      "Platform rental mobil modern dengan fitur katalog kendaraan, booking online, kalkulasi harga otomatis, dashboard admin, dan integrasi WhatsApp untuk memudahkan pengelolaan penyewaan kendaraan.",
+    tech: ["Laravel", "MySQL", "Bootstrap 5", "JavaScript"],
+    image: "/rencar.png",
+    demoUrl: "#",
+    githubUrl: "https://github.com/ericfernando19/Sistem-Rental-Mobil",
+  },
 ];
 
 export const WHY_CHOOSE_ME = [
