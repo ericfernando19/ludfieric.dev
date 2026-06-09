@@ -31,8 +31,8 @@ export default function WhyChooseMe() {
     <section id="why-choose-me" className="relative py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Mengapa Memilih Saya"
-          subtitle="Kelebihan yang saya tawarkan untuk memastikan website Anda berkualitas dan profesional."
+          title="Mengapa Saya Layak Dipilih"
+          subtitle="Nilai lebih yang saya bawa sebagai calon karyawan yang siap berkontribusi dalam tim Anda."
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">

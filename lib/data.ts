@@ -9,24 +9,25 @@ import type {
 
 export const SITE_CONFIG = {
   name: "Ludfi Eric Fernando",
-  title: "Web Developer",
+  title: "Fresh Graduate Informatika",
   tagline:
-    "Membangun Website Modern, Cepat, dan Profesional untuk Bisnis dan Personal Brand.",
+    "Lulusan Informatika siap berkontribusi dalam pengembangan teknologi digital yang inovatif dan berdampak.",
   description:
-    "Saya adalah seorang Web Developer yang berfokus pada pengembangan website modern, responsif, dan berkinerja tinggi. Saya membantu UMKM, bisnis, organisasi, dan personal brand membangun kehadiran digital yang profesional melalui website yang menarik, cepat, dan mudah digunakan.",
+    "Saya adalah lulusan Informatika yang antusias dalam pengembangan web dan teknologi digital. Memiliki pengalaman dalam membangun berbagai aplikasi web modern menggunakan framework terkini. Siap untuk belajar, tumbuh, dan memberikan kontribusi terbaik dalam tim pengembangan yang dinamis dan profesional.",
   email: "ericludfi19@gmail.com",
-  phone: "628583280038",
-  whatsapp: "628583280038",
+  phone: "6285832800738",
+  whatsapp: "6285832800738",
   github: "https://github.com/ericfernando19",
-  linkedin: "https://www.linkedin.com/in/ludfi-eric-fernando-9b8a2523b/",
+  linkedin: "https://www.linkedin.com/in/ludfi-eric-fernando-38a15428b/",
 } as const;
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
-  { label: "Services", href: "#services" },
+  { label: "Keahlian", href: "#keahlian" },
   { label: "Portfolio", href: "#portfolio" },
+  { label: "Approach", href: "#approach" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -51,34 +52,40 @@ export const SKILLS: Skill[] = [
 
 export const SERVICES: Service[] = [
   {
-    title: "Company Profile Website",
-    description: "Website profesional untuk perusahaan dan bisnis.",
-    icon: "Building2",
+    title: "Web Development",
+    description:
+      "Membangun aplikasi web modern menggunakan React, Next.js, dan teknologi terkini.",
+    icon: "Code2",
   },
   {
-    title: "Landing Page",
-    description: "Landing page untuk promosi produk atau jasa.",
+    title: "Frontend Engineering",
+    description:
+      "Mengembangkan antarmuka pengguna yang responsif, interaktif, dan accessible.",
     icon: "Layout",
   },
   {
-    title: "Website UMKM",
-    description: "Website untuk membantu UMKM berkembang secara digital.",
-    icon: "Store",
+    title: "UI/UX Design",
+    description:
+      "Merancang tampilan antarmuka yang intuitif dengan pendekatan user-centered design.",
+    icon: "Palette",
   },
   {
-    title: "Website Portofolio",
-    description: "Website personal branding profesional.",
-    icon: "UserCheck",
-  },
-  {
-    title: "Sistem Informasi",
-    description: "Website berbasis dashboard dan manajemen data.",
+    title: "Backend & API",
+    description:
+      "Mengembangkan REST API dan sistem backend yang scalable menggunakan Laravel.",
     icon: "Database",
   },
   {
-    title: "Website Custom",
-    description: "Pengembangan website sesuai kebutuhan klien.",
-    icon: "Code2",
+    title: "Database Design",
+    description:
+      "Merancang skema database yang efisien dan terstruktur untuk aplikasi berskala.",
+    icon: "Building2",
+  },
+  {
+    title: "Analisis Sistem",
+    description:
+      "Menganalisis kebutuhan dan merancang solusi teknis yang efektif dan efisien.",
+    icon: "Search",
   },
 ];
 
@@ -132,108 +139,116 @@ export const PROJECTS: Project[] = [
 
 export const WHY_CHOOSE_ME = [
   {
-    title: "Responsive Design",
-    description: "Website optimal di semua perangkat.",
-    icon: "Smartphone",
-  },
-  {
-    title: "Fast Performance",
-    description: "Optimasi kecepatan loading maksimal.",
+    title: "Cepat Belajar",
+    description:
+      "Mampu beradaptasi dengan teknologi baru secara cepat dan mandiri.",
     icon: "Zap",
   },
   {
-    title: "SEO Friendly",
-    description: "Struktur kode yang ramah mesin pencari.",
-    icon: "Search",
-  },
-  {
-    title: "Clean Code",
-    description: "Kode yang rapi, terstruktur, dan mudah dikelola.",
+    title: "Teliti & Terstruktur",
+    description:
+      "Menerapkan prinsip clean code dan dokumentasi yang rapi dalam setiap proyek.",
     icon: "FileCode",
   },
   {
-    title: "Modern UI/UX",
-    description: "Desain antarmuka yang modern dan intuitif.",
-    icon: "Palette",
+    title: "Kolaboratif",
+    description:
+      "Pengalaman kerja tim yang baik dan komunikasi yang efektif dalam pengembangan.",
+    icon: "Headphones",
   },
   {
-    title: "Secure Development",
-    description: "Praktik pengembangan yang aman dan terpercaya.",
-    icon: "Shield",
+    title: "Problem Solving",
+    description:
+      "Mampu menganalisis masalah dan menemukan solusi teknis yang tepat sasaran.",
+    icon: "Search",
   },
   {
-    title: "Scalable Architecture",
-    description: "Arsitektur yang dapat berkembang sesuai kebutuhan.",
+    title: "Modern Tech Stack",
+    description:
+      "Menguasai teknologi terkini seperti Next.js, TypeScript, dan Tailwind CSS.",
     icon: "Layers",
   },
   {
-    title: "Ongoing Support",
-    description: "Dukungan dan pemeliharaan berkelanjutan.",
-    icon: "Headphones",
+    title: "Portofolio Terbukti",
+    description:
+      "Telah mengerjakan berbagai proyek nyata dari UMKM hingga institusi pendidikan.",
+    icon: "Smartphone",
+  },
+  {
+    title: "UI/UX Mindset",
+    description:
+      "Memperhatikan pengalaman pengguna dan desain antarmuka yang modern.",
+    icon: "Palette",
+  },
+  {
+    title: "Berkomitmen",
+    description:
+      "Dedikasi tinggi terhadap target dan kualitas hasil kerja yang diberikan.",
+    icon: "Shield",
   },
 ];
 
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     step: 1,
-    title: "Diskusi Kebutuhan",
-    description: "Memahami tujuan, visi, dan kebutuhan spesifik proyek Anda.",
+    title: "Analisis & Riset",
+    description: "Memahami kebutuhan pengguna dan merancang solusi yang tepat.",
   },
   {
     step: 2,
-    title: "Perancangan UI/UX",
-    description: "Membuat desain antarmuka yang menarik dan mudah digunakan.",
+    title: "Perancangan Sistem",
+    description: "Membuat arsitektur dan desain teknis yang terstruktur.",
   },
   {
     step: 3,
     title: "Development",
     description:
-      "Mengembangkan website dengan kode berkualitas tinggi dan teknologi modern.",
+      "Mengembangkan aplikasi dengan kode berkualitas tinggi dan teknologi modern.",
   },
   {
     step: 4,
-    title: "Testing",
+    title: "Testing & QA",
     description:
-      "Pengujian menyeluruh untuk memastikan performa, keamanan, dan kompatibilitas.",
+      "Pengujian menyeluruh untuk memastikan kualitas dan keandalan sistem.",
   },
   {
     step: 5,
     title: "Deployment",
     description:
-      "Meluncurkan website ke production dengan proses deployment yang aman.",
+      "Meluncurkan aplikasi ke production dengan proses yang terkontrol.",
   },
   {
     step: 6,
-    title: "Maintenance",
-    description: "Pemeliharaan berkala dan dukungan teknis berkelanjutan.",
+    title: "Monitoring",
+    description: "Pemantauan berkala dan perbaikan berkelanjutan.",
   },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Ahmad Rizki",
-    role: "Owner",
-    company: "Rizki Bakery",
+    name: "Dr. Andi Pratama",
+    role: "Dosen Pembimbing",
+    company: "Universitas Informatika",
     content:
-      "Luar biasa! Website company profile yang dibuat sangat profesional dan meningkatkan kepercayaan pelanggan. Pelayanan cepat dan komunikatif.",
+      "Mahasiswa yang tekun dan memiliki pemahaman kuat dalam pengembangan web. Proyek-proyek yang dikerjakan menunjukkan kualitas dan dedikasi tinggi.",
     rating: 5,
     avatar: "/avatar-placeholder.svg",
   },
   {
-    name: "Dewi Sartika",
-    role: "Founder",
-    company: "Dewi Fashion",
+    name: "Rina Marlina",
+    role: "Project Lead",
+    company: "PT. Teknologi Digital",
     content:
-      "Sistem kasir yang dibuat sangat membantu operasional toko saya. Fitur lengkap, mudah digunakan, dan supportnya sangat responsif.",
+      "Eric menunjukkan kemampuan teknis yang baik dalam magang. Cepat belajar, komunikatif, dan mampu menyelesaikan tugas dengan tepat waktu.",
     rating: 5,
     avatar: "/avatar-placeholder.svg",
   },
   {
-    name: "Budi Hartono",
-    role: "Kepala Sekolah",
-    company: "SMA Negeri 1",
+    name: "Hendra Kusuma",
+    role: "Rekan Tim",
+    company: "Pengembangan Sistem Informasi",
     content:
-      "Sistem informasi sekolah yang dikembangkan sangat memudahkan administrasi dan pengelolaan data akademik. Sangat direkomendasikan!",
+      "Kerja sama tim yang solid. Eric sangat membantu dalam pengembangan sistem informasi akademik, dengan kode yang bersih dan terdokumentasi dengan baik.",
     rating: 5,
     avatar: "/avatar-placeholder.svg",
   },

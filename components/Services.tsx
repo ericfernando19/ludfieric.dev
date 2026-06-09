@@ -2,33 +2,33 @@
 
 import { motion } from "framer-motion"
 import {
-  Building2,
-  Layout,
-  Store,
-  UserCheck,
-  Database,
   Code2,
+  Layout,
+  Palette,
+  Database,
+  Building2,
+  Search,
   type LucideIcon,
 } from "lucide-react"
 import { SERVICES } from "@/lib/data"
 import SectionHeading from "./SectionHeading"
 
 const iconMap: Record<string, LucideIcon> = {
-  Building2,
-  Layout,
-  Store,
-  UserCheck,
-  Database,
   Code2,
+  Layout,
+  Palette,
+  Database,
+  Building2,
+  Search,
 }
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 md:py-32">
+    <section id="keahlian" className="relative py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Layanan"
-          subtitle="Solusi pengembangan website profesional untuk kebutuhan bisnis dan personal branding Anda."
+          title="Bidang Keahlian"
+          subtitle="Kompetensi yang saya kuasai di bidang pengembangan perangkat lunak dan teknologi informasi."
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowDown, MousePointerClick } from "lucide-react"
+import { ArrowDown, Briefcase } from "lucide-react"
 import { SITE_CONFIG } from "@/lib/data"
 
 export default function Hero() {
@@ -13,6 +13,7 @@ export default function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 dark:from-primary/10 dark:via-transparent dark:to-accent/10" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent dark:from-primary/20" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:64px_64px] dark:bg-[linear-gradient(rgba(99,102,241,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.05)_1px,transparent_1px)]" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
         <motion.div
@@ -22,8 +23,8 @@ export default function Hero() {
           className="mb-6"
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium bg-primary/10 text-primary dark:bg-primary/20 dark:text-accent border border-primary/20">
-            <MousePointerClick size={14} />
-            Tersedia untuk Proyek Baru
+            <Briefcase size={14} />
+            Mencari Peluang Kerja
           </span>
         </motion.div>
 

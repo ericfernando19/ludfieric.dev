@@ -6,11 +6,11 @@ import SectionHeading from "./SectionHeading";
 
 export default function Process() {
   return (
-    <section className="relative py-24 md:py-32 bg-zinc-50/50 dark:bg-white/[0.02]">
-      {/* <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="approach" className="relative py-24 md:py-32 bg-zinc-50/50 dark:bg-white/[0.02]">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Alur Kerja"
-          subtitle="Proses pengembangan website yang terstruktur dari awal hingga akhir."
+          title="Pendekatan Kerja"
+          subtitle="Metode pengembangan yang saya terapkan dalam setiap proyek untuk hasil yang optimal."
         />
 
         <div className="relative">
@@ -44,7 +44,7 @@ export default function Process() {
             ))}
           </div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 }

@@ -10,8 +10,8 @@ export default function Testimonials() {
     <section className="relative py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Testimonial"
-          subtitle="Apa kata klien tentang hasil kerja yang telah saya berikan."
+          title="Rekomendasi"
+          subtitle="Apa kata dosen, rekan tim, dan mentor tentang kemampuan dan karakter saya."
         />
 
         <div className="grid md:grid-cols-3 gap-6">

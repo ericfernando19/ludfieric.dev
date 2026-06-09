@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Rocket, Users } from "lucide-react";
+import { GraduationCap, Code2, Layers } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import { SITE_CONFIG } from "@/lib/data";
 
 const highlights = [
+  { icon: GraduationCap, label: "Pendidikan", value: "S1 Informatika" },
   { icon: Code2, label: "Pengalaman", value: "Web Developer" },
-  { icon: Rocket, label: "Fokus", value: "Website Modern & Cepat" },
-  { icon: Users, label: "Klien", value: "UMKM, Bisnis, Personal" },
+  { icon: Layers, label: "Proyek", value: "4 Aplikasi Web" },
 ];
 
 export default function About() {
@@ -33,9 +33,7 @@ export default function About() {
                 alt={SITE_CONFIG.name}
                 className="aspect-square rounded-2xl object-cover w-full"
               />
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center backdrop-blur-sm">
-                <span className="text-3xl font-bold text-accent">5+</span>
-              </div>
+
             </div>
           </motion.div>
 
@@ -54,11 +52,12 @@ export default function About() {
               {SITE_CONFIG.description}
             </p>
             <p className="text-muted dark:text-zinc-400 leading-relaxed">
-              Dengan pengalaman dalam berbagai teknologi web modern, saya
-              berkomitmen untuk memberikan hasil terbaik yang tidak hanya
-              memenuhi kebutuhan fungsional, tetapi juga memberikan pengalaman
-              pengguna yang luar biasa. Setiap proyek saya tangani dengan
-              pendekatan yang profesional, terstruktur, dan penuh dedikasi.
+              Dengan latar belakang pendidikan di bidang Informatika, saya
+              memiliki fondasi yang kuat dalam pengembangan perangkat lunak,
+              analisis sistem, dan desain algoritma. Saya terbiasa bekerja
+              dengan teknologi web modern dan selalu bersemangat untuk
+              mempelajari hal-hal baru demi menghasilkan solusi yang inovatif
+              dan berdampak.
             </p>
 
             <div className="grid grid-cols-3 gap-4 pt-4">
