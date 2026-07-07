@@ -148,7 +148,6 @@ export const CERTIFICATES: Certificate[] = [
     description:
       "Mempelajari dasar-dasar bahasa pemrograman Kotlin, dari syntax dasar hingga konsep object-oriented programming.",
     image: "/Memulai%20Pemograman%20dengan%20Kotlin.jpg",
-    certificateUrl: "#",
   },
   {
     title: "Belajar Dasar SQL Query Language",
@@ -158,7 +157,6 @@ export const CERTIFICATES: Certificate[] = [
     description:
       "Memahami konsep database relasional dan penulisan query SQL untuk manipulasi dan pengelolaan data.",
     image: "/Belajar%20Dasar%20Sql%20Query%20Language.jpg",
-    certificateUrl: "#",
   },
   {
     title: "Belajar Fundamental Aplikasi Android",
@@ -168,7 +166,6 @@ export const CERTIFICATES: Certificate[] = [
     description:
       "Mempelajari fundamental pengembangan aplikasi Android menggunakan Kotlin dan Android Studio.",
     image: "/Belajar%20Fundamental%20Aplikasi%20Android.png",
-    certificateUrl: "#",
   },
   {
     title: "Belajar Membuat Aplikasi Android Pemula",
@@ -178,7 +175,6 @@ export const CERTIFICATES: Certificate[] = [
     description:
       "Panduan langkah demi langkah membuat aplikasi Android pertama dengan antarmuka yang interaktif.",
     image: "/Belajar%20Membuat%20Aplikasi%20Android%20Pemula.png",
-    certificateUrl: "#",
   },
   {
     title: "Belajar Penerapan Machine Learning pada Android",
@@ -188,7 +184,6 @@ export const CERTIFICATES: Certificate[] = [
     description:
       "Mengintegrasikan model machine learning ke dalam aplikasi Android menggunakan TensorFlow Lite.",
     image: "/Belajar%20Penerapan%20Machine%20Learning%20pada%20Android.png",
-    certificateUrl: "#",
   },
   {
     title: "Dasar AI",
@@ -198,7 +193,6 @@ export const CERTIFICATES: Certificate[] = [
     description:
       "Pengenalan konsep kecerdasan buatan, machine learning, dan penerapannya dalam berbagai bidang.",
     image: "/Dasar%20Ai.png",
-    certificateUrl: "#",
   },
   {
     title: "Memulai Dasar Pemrograman Untuk Menjadi Pengembang Software",
@@ -209,7 +203,6 @@ export const CERTIFICATES: Certificate[] = [
       "Fundamental pemrograman yang menjadi pondasi untuk memulai karir sebagai pengembang perangkat lunak profesional.",
     image:
       "/Memulai%20Dasar%20Pemograman%20Untuk%20Menjadi%20Pemograman%20Software.jpg",
-    certificateUrl: "#",
   },
 ];
 
