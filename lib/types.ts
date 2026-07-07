@@ -44,3 +44,23 @@ export interface SocialLink {
   href: string
   icon: string
 }
+
+export type CertificateCategory =
+  | "Web Development"
+  | "Programming"
+  | "Backend"
+  | "Frontend"
+  | "Database"
+  | "Cloud"
+  | "AI"
+
+export interface Certificate {
+  title: string
+  organization: string
+  issueDate: string
+  category: CertificateCategory
+  description: string
+  image?: string
+  certificateUrl?: string
+  credentialUrl?: string
+}

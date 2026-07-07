@@ -3,6 +3,7 @@ import type {
   Skill,
   Service,
   Project,
+  Certificate,
   ProcessStep,
   Testimonial,
 } from "./types";
@@ -26,6 +27,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Keahlian", href: "#keahlian" },
+  { label: "Certificates", href: "#certificates" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Approach", href: "#approach" },
   { label: "Contact", href: "#contact" },
@@ -134,6 +136,80 @@ export const PROJECTS: Project[] = [
     image: "/rencar.png",
     demoUrl: "#",
     githubUrl: "https://github.com/ericfernando19/Sistem-Rental-Mobil",
+  },
+];
+
+export const CERTIFICATES: Certificate[] = [
+  {
+    title: "Memulai Pemrograman Dengan Kotlin",
+    organization: "Dicoding Indonesia",
+    issueDate: "Sep 2024",
+    category: "Programming",
+    description:
+      "Mempelajari dasar-dasar bahasa pemrograman Kotlin, dari syntax dasar hingga konsep object-oriented programming.",
+    image: "/Memulai%20Pemograman%20dengan%20Kotlin.jpg",
+    certificateUrl: "#",
+  },
+  {
+    title: "Belajar Dasar SQL Query Language",
+    organization: "Dicoding Indonesia",
+    issueDate: "Sep 2023",
+    category: "Database",
+    description:
+      "Memahami konsep database relasional dan penulisan query SQL untuk manipulasi dan pengelolaan data.",
+    image: "/Belajar%20Dasar%20Sql%20Query%20Language.jpg",
+    certificateUrl: "#",
+  },
+  {
+    title: "Belajar Fundamental Aplikasi Android",
+    organization: "Dicoding Indonesia",
+    issueDate: "Okt 2024",
+    category: "Programming",
+    description:
+      "Mempelajari fundamental pengembangan aplikasi Android menggunakan Kotlin dan Android Studio.",
+    image: "/Belajar%20Fundamental%20Aplikasi%20Android.png",
+    certificateUrl: "#",
+  },
+  {
+    title: "Belajar Membuat Aplikasi Android Pemula",
+    organization: "Dicoding Indonesia",
+    issueDate: "Sep 2024",
+    category: "Programming",
+    description:
+      "Panduan langkah demi langkah membuat aplikasi Android pertama dengan antarmuka yang interaktif.",
+    image: "/Belajar%20Membuat%20Aplikasi%20Android%20Pemula.png",
+    certificateUrl: "#",
+  },
+  {
+    title: "Belajar Penerapan Machine Learning pada Android",
+    organization: "Dicoding Indonesia",
+    issueDate: "Nov 2024",
+    category: "AI",
+    description:
+      "Mengintegrasikan model machine learning ke dalam aplikasi Android menggunakan TensorFlow Lite.",
+    image: "/Belajar%20Penerapan%20Machine%20Learning%20pada%20Android.png",
+    certificateUrl: "#",
+  },
+  {
+    title: "Dasar AI",
+    organization: "Dicoding Indonesia",
+    issueDate: "Okt 2024",
+    category: "AI",
+    description:
+      "Pengenalan konsep kecerdasan buatan, machine learning, dan penerapannya dalam berbagai bidang.",
+    image: "/Dasar%20Ai.png",
+    certificateUrl: "#",
+  },
+  {
+    title: "Memulai Dasar Pemrograman Untuk Menjadi Pengembang Software",
+    organization: "Dicoding Indonesia",
+    issueDate: "Sep 2024",
+    category: "Programming",
+    description:
+      "Fundamental pemrograman yang menjadi pondasi untuk memulai karir sebagai pengembang perangkat lunak profesional.",
+    image:
+      "/Memulai%20Dasar%20Pemograman%20Untuk%20Menjadi%20Pemograman%20Software.jpg",
+    certificateUrl: "#",
   },
 ];
 

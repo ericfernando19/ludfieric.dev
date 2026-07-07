@@ -4,6 +4,7 @@ import About from "@/components/About"
 import Skills from "@/components/Skills"
 import Services from "@/components/Services"
 import Portfolio from "@/components/Portfolio"
+import Certificates from "@/components/Certificates"
 import WhyChooseMe from "@/components/WhyChooseMe"
 import Process from "@/components/Process"
 import Testimonials from "@/components/Testimonials"
@@ -20,6 +21,7 @@ export default function Home() {
         <Skills />
         <Services />
         <Portfolio />
+        <Certificates />
         <WhyChooseMe />
         <Process />
         {/* <Testimonials /> */}
