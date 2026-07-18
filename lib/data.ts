@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
       "Website company profile premium dengan tampilan modern, responsive, dan elegan.",
     tech: ["Next.js", "Tailwind CSS"],
     image: "/coffeshop.png",
-    demoUrl: "#",
+    demoUrl: "https://coffeeshop-kopi-kita.vercel.app/",
     githubUrl: "https://github.com/ericfernando19/company-profile-coffeeshop",
   },
   {
@@ -137,9 +137,36 @@ export const PROJECTS: Project[] = [
     demoUrl: "#",
     githubUrl: "https://github.com/ericfernando19/Sistem-Rental-Mobil",
   },
+  {
+    title: "MyFurni - Katalog Furniture",
+    description:
+      "Website katalog furniture modern dengan fitur kategori produk, detail produk, keranjang belanja, dashboard admin, dan checkout melalui WhatsApp untuk memudahkan pelanggan melihat serta memesan produk furniture.",
+    tech: ["Next.js", "TypeScript", "Prisma", "SQLite"],
+    image: "/myfurni.png",
+    demoUrl: "https://myfurni-catalog.vercel.app/",
+    githubUrl: "https://github.com/ericfernando19/luxury-furniture-catalog",
+  },
 ];
 
 export const CERTIFICATES: Certificate[] = [
+  {
+    title: "Bangkit Academy 2024 Batch 2",
+    organization: "Bangkit Academy (Google, GoTo, & Traveloka)",
+    issueDate: "Des 2024",
+    category: "Mobile Development",
+    description:
+      "Berhasil menyelesaikan program Bangkit Academy pada jalur Mobile Development dengan mempelajari pengembangan aplikasi Android menggunakan Kotlin, arsitektur aplikasi, integrasi REST API, database lokal, serta mengembangkan proyek capstone secara kolaboratif.",
+    image: "/sertif_bangkit.jpg",
+  },
+  {
+    title: "Magang dan Studi Independen Bersertifikat (MSIB)",
+    organization: "Kampus Merdeka",
+    issueDate: "Des 2024",
+    category: "Studi Independen",
+    description:
+      "Berhasil menyelesaikan program Studi Independen Bersertifikat (MSIB) yang berfokus pada pembelajaran berbasis proyek, pengembangan keterampilan teknis, kolaborasi tim, serta kesiapan menghadapi dunia kerja.",
+    image: "/sertif_msib.png",
+  },
   {
     title: "Memulai Pemrograman Dengan Kotlin",
     organization: "Dicoding Indonesia",

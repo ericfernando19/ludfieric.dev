@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/lib/icons";
 import { PROJECTS } from "@/lib/data";
 import SectionHeading from "./SectionHeading";
@@ -51,21 +52,29 @@ export default function Portfolio() {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-3">
-                  {/* <a
-                    href={project.demoUrl}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
-                  >
-                    <ExternalLink size={14} />
-                    Demo
-                  </a> */}
-                  <a
-                    href={project.githubUrl}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-muted dark:text-zinc-400 hover:text-primary transition-colors"
-                  >
-                    <GithubIcon className="w-3.5 h-3.5" />
-                    GitHub
-                  </a>
+                <div className="flex gap-2">
+                  {project.demoUrl && project.demoUrl !== "#" && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-primary text-white hover:bg-primary-dark transition-colors"
+                    >
+                      <ExternalLink size={13} />
+                      Demo
+                    </a>
+                  )}
+                  {project.githubUrl && project.githubUrl !== "#" && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg border border-border dark:border-zinc-700 text-secondary dark:text-zinc-300 hover:border-primary/40 dark:hover:border-primary/40 hover:text-primary transition-colors"
+                    >
+                      <GithubIcon className="w-3.5 h-3.5" />
+                      GitHub
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
