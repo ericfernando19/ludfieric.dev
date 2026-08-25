@@ -47,7 +47,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <button
             onClick={() => handleClick("#home")}
-            className="text-lg font-bold tracking-tight text-secondary dark:text-white hover:text-primary transition-colors"
+            className="text-lg font-bold tracking-tight text-secondary dark:text-white hover:text-primary transition-colors truncate max-w-[140px] sm:max-w-none"
           >
             {SITE_CONFIG.name}
           </button>
