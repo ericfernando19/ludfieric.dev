@@ -1,108 +1,122 @@
 "use client"
 
-import { useState, useCallback } from "react"
+import { useState, useCallback, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { X } from "lucide-react"
+import { X, ChevronLeft, ChevronRight } from "lucide-react"
 import { CERTIFICATES } from "@/lib/data"
+import { useLang } from "./LanguageProvider"
 import SectionHeading from "./SectionHeading"
 
-const categoryGradients: Record<string, string> = {
-  "Web Development": "from-blue-600 to-cyan-500",
-  Programming: "from-purple-600 to-pink-500",
-  Backend: "from-emerald-600 to-teal-500",
-  Frontend: "from-orange-600 to-amber-500",
-  Database: "from-pink-600 to-rose-500",
-  Cloud: "from-cyan-600 to-blue-500",
-  AI: "from-violet-600 to-purple-500",
-}
-
-function getInitials(title: string): string {
-  return title
-    .split(" ")
-    .map((w) => w[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase()
+const categoryColors: Record<string, string> = {
+  "Mobile Development": "bg-blue-500",
+  "Studi Independen": "bg-emerald-500",
+  Programming: "bg-purple-500",
+  Database: "bg-pink-500",
+  AI: "bg-violet-500",
 }
 
 export default function Certificates() {
+  const { t } = useLang()
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const scrollRef = useRef<HTMLDivElement>(null)
 
   const closeModal = useCallback(() => setSelectedImage(null), [])
 
+  const scroll = (direction: "left" | "right") => {
+    if (!scrollRef.current) return
+    const amount = 320
+    scrollRef.current.scrollBy({
+      left: direction === "left" ? -amount : amount,
+      behavior: "smooth",
+    })
+  }
+
   return (
     <>
-      <section id="certificates" className="relative py-24 md:py-32">
+      <section id="certificates" className="relative py-24 md:py-32 bg-zinc-50/50 dark:bg-white/[0.02]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            title="Sertifikat"
-            subtitle="Sertifikasi profesional dan pencapaian yang menunjukkan komitmen saya dalam pembelajaran berkelanjutan di bidang pengembangan perangkat lunak."
+            title={t.certificates.heading}
+            subtitle={t.certificates.subtitle}
           />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {CERTIFICATES.map((cert, i) => {
-              const initials = getInitials(cert.title)
-              const gradient = categoryGradients[cert.category]
+          <div className="relative">
+            <div className="flex justify-end gap-2 mb-4">
+              <button
+                onClick={() => scroll("left")}
+                className="p-2 rounded-lg border border-border dark:border-zinc-800 text-muted dark:text-zinc-400 hover:text-primary hover:border-primary/30 transition-colors"
+                aria-label={t.certificates.prev}
+              >
+                <ChevronLeft size={18} />
+              </button>
+              <button
+                onClick={() => scroll("right")}
+                className="p-2 rounded-lg border border-border dark:border-zinc-800 text-muted dark:text-zinc-400 hover:text-primary hover:border-primary/30 transition-colors"
+                aria-label={t.certificates.next}
+              >
+                <ChevronRight size={18} />
+              </button>
+            </div>
 
-              return (
-                <motion.div
-                  key={cert.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
-                  whileHover={{ y: -6 }}
-                  className="group block rounded-2xl bg-white dark:bg-white/5 dark:backdrop-blur-xl border border-border dark:border-zinc-800 overflow-hidden hover:border-primary/30 dark:hover:border-primary/30 hover:shadow-xl dark:hover:shadow-primary/5 transition-all duration-300"
-                >
-                  {cert.image ? (
-                    <div
-                      className="aspect-[4/3] overflow-hidden bg-zinc-100 dark:bg-zinc-900 cursor-pointer"
-                      onClick={() => setSelectedImage(cert.image!)}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter" || e.key === " ") {
-                          e.preventDefault()
-                          setSelectedImage(cert.image!)
-                        }
-                      }}
-                      role="button"
-                      tabIndex={0}
-                      aria-label={`Perbesar sertifikat ${cert.title}`}
-                    >
-                      <img
-                        src={cert.image}
-                        alt={cert.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none"
-                      />
-                    </div>
-                  ) : (
-                    <div className="aspect-[4/3] overflow-hidden bg-zinc-100 dark:bg-zinc-900">
+            <div
+              ref={scrollRef}
+              className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
+              {CERTIFICATES.map((cert, i) => {
+                const dotColor = categoryColors[cert.category] || "bg-zinc-400"
+
+                return (
+                  <motion.div
+                    key={cert.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.4, delay: i * 0.05 }}
+                    className="flex-none w-[280px] snap-start rounded-2xl bg-white dark:bg-white/5 border border-border dark:border-zinc-800 overflow-hidden hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-300"
+                  >
+                    {cert.image && (
                       <div
-                        className={`w-full h-full bg-gradient-to-br ${gradient} flex items-center justify-center`}
+                        className="aspect-[4/3] overflow-hidden bg-zinc-100 dark:bg-zinc-900 cursor-pointer"
+                        onClick={() => setSelectedImage(cert.image!)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault()
+                            setSelectedImage(cert.image!)
+                          }
+                        }}
+                        aria-label={`${t.certificates.enlarge} ${cert.title}`}
                       >
-                        <span className="text-4xl md:text-5xl font-bold text-white/90 select-none">
-                          {initials}
+                        <img
+                          src={cert.image}
+                          alt={cert.title}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 pointer-events-none"
+                        />
+                      </div>
+                    )}
+                    <div className="p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className={`w-2 h-2 rounded-full ${dotColor}`} />
+                        <span className="text-xs text-muted dark:text-zinc-500">
+                          {cert.category}
                         </span>
                       </div>
+                      <h3 className="text-sm font-semibold text-secondary dark:text-white mb-1 leading-snug line-clamp-2">
+                        {cert.title}
+                      </h3>
+                      <p className="text-xs text-muted dark:text-zinc-500">
+                        {cert.organization}
+                      </p>
+                      <p className="text-xs text-muted/70 dark:text-zinc-600 mt-1">
+                        {cert.issueDate}
+                      </p>
                     </div>
-                  )}
-                  <div className="p-5">
-                    <h3 className="text-lg font-semibold text-secondary dark:text-white mb-1 leading-snug group-hover:text-primary transition-colors">
-                      {cert.title}
-                    </h3>
-                    <p className="text-sm text-muted dark:text-zinc-400 mb-1">
-                      {cert.organization}
-                    </p>
-                    <p className="text-xs text-muted/70 dark:text-zinc-500 mb-3">
-                      Diterbitkan {cert.issueDate}
-                    </p>
-                    <p className="text-sm text-muted dark:text-zinc-400 leading-relaxed line-clamp-2">
-                      {cert.description}
-                    </p>
-
-                  </div>
-                </motion.div>
-              )
-            })}
+                  </motion.div>
+                )
+              })}
+            </div>
           </div>
         </div>
       </section>

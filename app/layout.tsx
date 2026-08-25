@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Script from "next/script"
 import { Geist, Geist_Mono } from "next/font/google"
+import { LanguageProvider } from "@/components/LanguageProvider"
 import "./globals.css"
 
 const geistSans = Geist({
@@ -72,7 +73,9 @@ export default function RootLayout({
               })();
             `}
           </Script>
-          {children}
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
         </body>
       </html>
   )

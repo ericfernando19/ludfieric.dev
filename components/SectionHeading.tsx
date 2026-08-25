@@ -18,15 +18,14 @@ export default function SectionHeading({ title, subtitle, className }: Props) {
       transition={{ duration: 0.5 }}
       className={cn("text-center mb-16", className)}
     >
-      <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-        <span className="gradient-text">{title}</span>
+      <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-secondary dark:text-white">
+        {title}
       </h2>
       {subtitle && (
         <p className="mt-4 text-muted dark:text-zinc-400 max-w-2xl mx-auto text-lg">
           {subtitle}
         </p>
       )}
-      <div className="mt-4 mx-auto w-20 h-1 rounded-full gradient-bg" />
     </motion.div>
   )
 }

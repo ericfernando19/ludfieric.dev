@@ -6,13 +6,6 @@ export interface NavLink {
 export interface Skill {
   name: string
   category: "frontend" | "backend" | "database" | "tools"
-  level?: number
-}
-
-export interface Service {
-  title: string
-  description: string
-  icon: string
 }
 
 export interface Project {
@@ -24,27 +17,6 @@ export interface Project {
   githubUrl?: string
 }
 
-export interface ProcessStep {
-  step: number
-  title: string
-  description: string
-}
-
-export interface Testimonial {
-  name: string
-  role: string
-  company: string
-  content: string
-  rating: number
-  avatar: string
-}
-
-export interface SocialLink {
-  label: string
-  href: string
-  icon: string
-}
-
 export type CertificateCategory =
   | "Web Development"
   | "Programming"
@@ -53,6 +25,8 @@ export type CertificateCategory =
   | "Database"
   | "Cloud"
   | "AI"
+  | "Mobile Development"
+  | "Studi Independen"
 
 export interface Certificate {
   title: string
@@ -63,4 +37,10 @@ export interface Certificate {
   image?: string
   certificateUrl?: string
   credentialUrl?: string
+}
+
+export interface SocialLink {
+  label: string
+  href: string
+  icon: string
 }
