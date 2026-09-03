@@ -1,9 +1,4 @@
-﻿import type {
-  NavLink,
-  Skill,
-  Project,
-  Certificate,
-} from "./types";
+﻿import type { NavLink, Skill, Project, Certificate } from "./types";
 
 export const SITE_CONFIG = {
   name: "Ludfi Eric Fernando",
@@ -69,7 +64,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Sistem Informasi Sekolah (SPADA)",
     description:
-      "Sistem informasi akademik untuk manajemen data siswa, guru, dan nilai.",
+      "Sistem informasi akademik untuk manajemen data siswa, guru, dan nilai. Proyek Tugas Akhir kerja sama dengan sekolah, sehingga tidak tersedia link demo dan repository publik.",
     tech: ["Laravel", "Bootstrap"],
     image: "/spada.png",
     demoUrl: "#",
@@ -92,6 +87,15 @@ export const PROJECTS: Project[] = [
     image: "/myfurni.png",
     demoUrl: "https://myfurni-catalog.vercel.app/",
     githubUrl: "https://github.com/ericfernando19/luxury-furniture-catalog",
+  },
+  {
+    title: "Sports Field Booking Platform",
+    description:
+      "Platform booking lapangan olahraga berbasis web yang memudahkan pengguna mencari lapangan, melihat jadwal, dan melakukan booking secara online. Dilengkapi dengan autentikasi, riwayat booking, pembayaran, serta dashboard admin untuk mengelola lapangan dan jadwal. Dibangun menggunakan Next.js, TypeScript, PostgreSQL, Prisma, dan Tailwind CSS.",
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS"],
+    image: "/SportBook.png",
+    demoUrl: "https://github.com/ericfernando19/sports-field-booking",
+    githubUrl: "https://sports-field-booking19.vercel.app/",
   },
 ];
 
