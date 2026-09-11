@@ -94,8 +94,8 @@ export const PROJECTS: Project[] = [
       "Platform booking lapangan olahraga berbasis web yang memudahkan pengguna mencari lapangan, melihat jadwal, dan melakukan booking secara online. Dilengkapi dengan autentikasi, riwayat booking, pembayaran, serta dashboard admin untuk mengelola lapangan dan jadwal. Dibangun menggunakan Next.js, TypeScript, PostgreSQL, Prisma, dan Tailwind CSS.",
     tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS"],
     image: "/SportBook.png",
-    demoUrl: "https://github.com/ericfernando19/sports-field-booking",
-    githubUrl: "https://sports-field-booking19.vercel.app/",
+    demoUrl: "https://sports-field-booking19.vercel.app/",
+    githubUrl: "https://github.com/ericfernando19/sports-field-booking",
   },
 ];
 
