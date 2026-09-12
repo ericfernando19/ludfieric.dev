@@ -17,18 +17,18 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-border dark:border-zinc-800">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
           <p className="text-sm text-muted dark:text-zinc-500 text-center md:text-left">
             &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. {t.footer.copyright}
           </p>
 
-          <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-muted dark:text-zinc-500 hover:text-primary transition-colors"
+                className="text-sm text-muted dark:text-zinc-500 hover:text-primary dark:hover:text-terracotta transition-colors"
               >
                 {link.label}
               </a>
