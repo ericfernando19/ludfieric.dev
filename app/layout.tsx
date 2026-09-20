@@ -15,33 +15,33 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Ludfi Eric Fernando | Fresh Graduate Informatika",
+  title: "Ludfi Eric Fernando | Web Developer",
   description:
-    "Lulusan Informatika berfokus pada pengembangan web dengan React, Next.js, dan TypeScript. Mencari peluang kerja untuk berkontribusi dalam tim pengembangan yang dinamis.",
+    "Web Developer berfokus pada pengembangan web dengan React, Next.js, dan TypeScript. Menerima proyek freelance dan pencari peluang kerja dalam tim pengembangan yang dinamis.",
   keywords: [
-    "fresh graduate",
-    "informatika",
     "web developer",
-    "portfolio",
-    "next.js",
-    "react",
+    "freelance web developer",
+    "jasa pembuatan website",
+    "react developer",
+    "next.js developer",
     "typescript",
     "laravel",
+    "portfolio",
     "ludfi eric fernando",
   ],
   authors: [{ name: "Ludfi Eric Fernando" }],
   openGraph: {
-    title: "Ludfi Eric Fernando | Fresh Graduate Informatika",
+    title: "Ludfi Eric Fernando | Web Developer",
     description:
-      "Lulusan Informatika berfokus pada pengembangan web dengan React, Next.js, dan TypeScript.",
+      "Web Developer berfokus pada pengembangan web dengan React, Next.js, dan TypeScript.",
     type: "website",
     locale: "id_ID",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ludfi Eric Fernando | Fresh Graduate Informatika",
+    title: "Ludfi Eric Fernando | Web Developer",
     description:
-      "Lulusan Informatika berfokus pada pengembangan web dengan React, Next.js, dan TypeScript.",
+      "Web Developer berfokus pada pengembangan web dengan React, Next.js, dan TypeScript.",
   },
   robots: {
     index: true,

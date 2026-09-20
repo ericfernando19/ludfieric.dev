@@ -2,11 +2,11 @@
 
 export const SITE_CONFIG = {
   name: "Ludfi Eric Fernando",
-  title: "Fresh Graduate Informatika",
+  title: "Web Developer",
   tagline:
-    "Lulusan Informatika siap berkontribusi dalam pengembangan teknologi digital yang inovatif dan berdampak.",
+    "Web Developer (Frontend & Backend) — siap bantu bangun website modern, dari company profile sampai web app custom.",
   description:
-    "Saya adalah lulusan Informatika yang antusias dalam pengembangan web dan teknologi digital. Memiliki pengalaman dalam membangun berbagai aplikasi web modern menggunakan framework terkini. Siap untuk belajar, tumbuh, dan memberikan kontribusi terbaik dalam tim pengembangan yang dinamis dan profesional.",
+    "Saya adalah seorang Web Developer yang antusias dalam pengembangan web dan teknologi digital. Memiliki pengalaman dalam membangun berbagai aplikasi web modern menggunakan framework terkini. Selain mencari peluang kerja, saya juga terbuka untuk proyek freelance dan kolaborasi.",
   email: "ericludfi19@gmail.com",
   phone: "6285832800738",
   whatsapp: "6285832800738",

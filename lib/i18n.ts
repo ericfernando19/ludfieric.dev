@@ -12,9 +12,9 @@ export const translations = {
     },
     hero: {
       title: "Ludfi Eric Fernando",
-      subtitle: "Fresh Graduate Informatika",
+      subtitle: "Web Developer",
       tagline:
-        "Lulusan Informatika siap berkontribusi dalam pengembangan teknologi digital yang inovatif dan berdampak.",
+        "Web Developer (Frontend & Backend) — siap bantu bangun website modern, dari company profile sampai web app custom.",
       ctaProjects: "Lihat Proyek",
       ctaContact: "Hubungi Saya",
     },
@@ -22,9 +22,9 @@ export const translations = {
       heading: "Tentang Saya",
       subtitle: "Mengenal lebih dekat siapa saya dan apa yang saya lakukan.",
       description1:
-        "Saya adalah lulusan Informatika yang antusias dalam pengembangan web dan teknologi digital. Memiliki pengalaman dalam membangun berbagai aplikasi web modern menggunakan framework terkini. Siap untuk belajar, tumbuh, dan memberikan kontribusi terbaik dalam tim pengembangan yang dinamis dan profesional.",
+        "Saya adalah seorang Web Developer yang antusias dalam pengembangan web dan teknologi digital. Memiliki pengalaman dalam membangun berbagai aplikasi web modern menggunakan framework terkini. Selain mencari peluang kerja, saya juga terbuka untuk proyek freelance dan kolaborasi.",
       description2:
-        "Dengan latar belakang pendidikan di bidang Informatika, saya memiliki fondasi yang kuat dalam pengembangan perangkat lunak, analisis sistem, dan desain algoritma. Saya terbiasa bekerja dengan teknologi web modern dan selalu bersemangat untuk mempelajari hal-hal baru demi menghasilkan solusi yang inovatif dan berdampak.",
+        "Dengan pengalaman di bidang pengembangan web, saya memiliki fondasi yang kuat dalam pengembangan perangkat lunak, analisis sistem, dan desain algoritma. Saya terbiasa bekerja dengan teknologi web modern dan selalu bersemangat untuk mempelajari hal-hal baru demi menghasilkan solusi yang inovatif dan berdampak.",
       stat1Label: "Informatika",
       stat2Label: "Proyek Web",
       stat3Label: "Sertifikat",
@@ -87,9 +87,9 @@ export const translations = {
     },
     hero: {
       title: "Ludfi Eric Fernando",
-      subtitle: "Fresh Graduate in Informatics",
+      subtitle: "Web Developer",
       tagline:
-        "Informatics graduate ready to contribute to innovative and impactful digital technology development.",
+        "Web Developer (Frontend & Backend) — ready to help build modern websites, from company profiles to custom web apps.",
       ctaProjects: "View Projects",
       ctaContact: "Get in Touch",
     },
@@ -97,9 +97,9 @@ export const translations = {
       heading: "About Me",
       subtitle: "Get to know who I am and what I do.",
       description1:
-        "I am an Informatics graduate passionate about web development and digital technology. Experienced in building various modern web applications using the latest frameworks. Ready to learn, grow, and deliver my best contribution in a dynamic and professional development team.",
+        "I am a Web Developer passionate about web development and digital technology. Experienced in building various modern web applications using the latest frameworks. Open to freelance projects and collaborations.",
       description2:
-        "With a background in Informatics education, I have a strong foundation in software development, systems analysis, and algorithm design. I am accustomed to working with modern web technologies and always eager to learn new things to produce innovative and impactful solutions.",
+        "With experience in web development, I have a strong foundation in software development, systems analysis, and algorithm design. I am accustomed to working with modern web technologies and always eager to learn new things to produce innovative and impactful solutions.",
       stat1Label: "Informatics",
       stat2Label: "Web Projects",
       stat3Label: "Certificates",
