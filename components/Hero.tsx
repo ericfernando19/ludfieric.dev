@@ -65,9 +65,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="aspect-[3/4] overflow-hidden bg-zinc-100 dark:bg-white/5">
+          <div className="aspect-[3/4] overflow-hidden">
             <img
-              src="/foto_pp.png"
+              src="/fotoku.png"
               alt={t.hero.title}
               className="w-full h-full object-cover"
             />
