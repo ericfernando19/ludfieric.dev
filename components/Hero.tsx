@@ -87,6 +87,9 @@ export default function Hero() {
           <p className="text-base sm:text-lg text-muted dark:text-zinc-400 leading-relaxed">
             {t.hero.tagline}
           </p>
+          <p className="mt-4 inline-block rounded-full border border-border dark:border-zinc-700 bg-zinc-50 dark:bg-white/5 px-4 py-2 text-xs sm:text-sm text-muted dark:text-zinc-400">
+            {t.hero.status}
+          </p>
         </motion.div>
 
         {/* CTA buttons */}

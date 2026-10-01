@@ -11,6 +11,7 @@ export default function Footer() {
     { label: t.nav.about, href: "#about" },
     { label: t.nav.skills, href: "#skills" },
     { label: t.nav.projects, href: "#projects" },
+    { label: t.nav.education, href: "#experience" },
     { label: t.nav.certificates, href: "#certificates" },
     { label: t.nav.contact, href: "#contact" },
   ]

@@ -19,9 +19,11 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
+    { label: t.nav.home, href: "#home" },
     { label: t.nav.about, href: "#about" },
     { label: t.nav.skills, href: "#skills" },
     { label: t.nav.projects, href: "#projects" },
+    { label: t.nav.education, href: "#experience" },
     { label: t.nav.certificates, href: "#certificates" },
     { label: t.nav.contact, href: "#contact" },
   ]
@@ -44,7 +46,7 @@ export default function Navbar() {
       <nav className="w-full px-5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
           {/* Desktop nav links */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-4 lg:gap-6">
             {navLinks.map((link) => (
               <button
                 key={link.href}

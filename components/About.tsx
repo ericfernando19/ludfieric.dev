@@ -47,7 +47,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-12 grid grid-cols-3 gap-8 border-t border-border dark:border-zinc-800 pt-8"
+              className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-8 border-t border-border dark:border-zinc-800 pt-8"
             >
               <div>
                 <div className="text-3xl sm:text-4xl font-bold tracking-tight text-secondary dark:text-white">
@@ -57,7 +57,7 @@ export default function About() {
               </div>
               <div>
                 <div className="text-3xl sm:text-4xl font-bold tracking-tight text-secondary dark:text-white">
-                  5+
+                  6
                 </div>
                 <div className="text-sm text-muted dark:text-zinc-500 mt-1">{t.about.stat2Label}</div>
               </div>
@@ -66,6 +66,12 @@ export default function About() {
                   9
                 </div>
                 <div className="text-sm text-muted dark:text-zinc-500 mt-1">{t.about.stat3Label}</div>
+              </div>
+              <div>
+                <div className="text-3xl sm:text-4xl font-bold tracking-tight text-secondary dark:text-white">
+                  2
+                </div>
+                <div className="text-sm text-muted dark:text-zinc-500 mt-1">{t.about.stat4Label}</div>
               </div>
             </motion.div>
 

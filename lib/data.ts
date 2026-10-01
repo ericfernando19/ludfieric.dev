@@ -2,7 +2,7 @@
 
 export const SITE_CONFIG = {
   name: "Ludfi Eric Fernando",
-  title: "Web Developer",
+  title: "Web Developer · Frontend & Backend",
   tagline:
     "Web Developer (Frontend & Backend) — siap bantu bangun website modern, dari company profile sampai web app custom.",
   description:
@@ -20,7 +20,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Certificates", href: "#certificates" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "#contact" }, 
 ];
 
 export const SKILLS: Skill[] = [
@@ -31,11 +31,16 @@ export const SKILLS: Skill[] = [
   { name: "React", category: "frontend" },
   { name: "Next.js", category: "frontend" },
   { name: "Tailwind CSS", category: "frontend" },
+  { name: "Bootstrap", category: "frontend" },
   { name: "PHP", category: "backend" },
   { name: "Laravel", category: "backend" },
   { name: "REST API", category: "backend" },
+  { name: "Prisma", category: "backend" },
   { name: "MySQL", category: "database" },
   { name: "PostgreSQL", category: "database" },
+  { name: "SQLite", category: "database" },
+  { name: "Kotlin", category: "mobile" },
+  { name: "Android (dasar)", category: "mobile" },
   { name: "Git", category: "tools" },
   { name: "GitHub", category: "tools" },
   { name: "VS Code", category: "tools" },

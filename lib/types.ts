@@ -5,7 +5,7 @@ export interface NavLink {
 
 export interface Skill {
   name: string
-  category: "frontend" | "backend" | "database" | "tools"
+  category: "frontend" | "backend" | "database" | "mobile" | "tools"
 }
 
 export interface Project {
