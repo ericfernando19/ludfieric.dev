@@ -14,6 +14,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
+    onScroll()
     window.addEventListener("scroll", onScroll, { passive: true })
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
@@ -39,38 +40,58 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-surface/90 dark:bg-dark/90 backdrop-blur-xl border-b border-border/50 dark:border-zinc-800/50"
-          : "bg-surface/60 dark:bg-dark/60 backdrop-blur-sm"
+          ? "bg-surface/90 backdrop-blur-xl border-b border-border dark:bg-navy-950/90 dark:border-white/10"
+          : "bg-surface/60 backdrop-blur-sm dark:bg-transparent"
       )}
     >
       <nav className="w-full px-5 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14">
-          {/* Desktop nav links */}
-          <div className="hidden md:flex items-center gap-4 lg:gap-6">
+        <div className="flex h-16 max-w-7xl mx-auto items-center justify-between gap-4">
+          {/* Logo */}
+          <button
+            onClick={() => handleClick("#home")}
+            className="flex shrink-0 items-center gap-2.5"
+            aria-label={t.nav.home}
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary-dark text-sm font-black text-white shadow-[0_8px_20px_-8px_rgba(30,114,234,0.9)]">
+              LE
+            </span>
+            <span className="hidden sm:inline text-[13px] font-extrabold uppercase tracking-[0.14em] text-secondary dark:text-white">
+              Ludfi Eric Fernando
+            </span>
+          </button>
+
+          {/* Desktop links */}
+          <div className="hidden lg:flex flex-1 items-center justify-center gap-5 xl:gap-7">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleClick(link.href)}
-                className="text-sm text-muted dark:text-zinc-400 hover:text-secondary dark:hover:text-white transition-colors"
+                className="whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.12em] text-muted hover:text-secondary transition-colors dark:text-steel dark:hover:text-white"
               >
                 {link.label}
               </button>
             ))}
           </div>
 
-          {/* Right: toggles + hamburger */}
-          <div className="flex items-center gap-2 ml-auto">
+          {/* Right: toggles + CTA */}
+          <div className="flex shrink-0 items-center gap-2">
             <button
               onClick={toggle}
-              className="px-2.5 py-1.5 text-xs font-semibold rounded-full border border-border dark:border-zinc-700 text-muted dark:text-zinc-400 hover:text-primary dark:hover:text-terracotta hover:border-primary/30 dark:hover:border-terracotta/30 transition-colors"
+              className="px-2.5 py-1.5 text-[11px] font-bold rounded-full border border-secondary/20 text-muted hover:border-primary hover:text-primary transition-colors dark:border-white/15 dark:text-steel dark:hover:border-primary-light dark:hover:text-primary-light"
               aria-label="Toggle language"
             >
               {locale === "id" ? "EN" : "ID"}
             </button>
             <ThemeToggle />
             <button
+              onClick={() => handleClick("#contact")}
+              className="btn-primary hidden sm:inline-flex !px-5 !py-2.5 !text-[12px]"
+            >
+              {t.hero.ctaContact}
+            </button>
+            <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 text-secondary dark:text-white hover:bg-zinc-200/50 dark:hover:bg-white/10 rounded-lg transition-colors"
+              className="lg:hidden p-2 text-secondary dark:text-white hover:bg-black/5 dark:hover:bg-white/10 rounded-lg transition-colors"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={22} /> : <Menu size={22} />}
@@ -85,18 +106,24 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-b border-border dark:border-zinc-800 bg-surface dark:bg-dark/95 backdrop-blur-xl"
+            className="lg:hidden border-b border-border bg-surface/95 backdrop-blur-xl dark:border-white/10 dark:bg-navy-950/95"
           >
             <div className="px-5 py-4 space-y-1">
               {navLinks.map((link) => (
                 <button
                   key={link.href}
                   onClick={() => handleClick(link.href)}
-                  className="block w-full text-left px-3 py-2.5 text-sm font-medium text-muted dark:text-zinc-400 hover:text-primary dark:hover:text-terracotta hover:bg-zinc-100 dark:hover:bg-white/5 rounded-lg transition-colors"
+                  className="block w-full text-left px-3 py-2.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-muted hover:text-primary hover:bg-black/5 rounded-lg transition-colors dark:text-steel dark:hover:text-primary-light dark:hover:bg-white/5"
                 >
                   {link.label}
                 </button>
               ))}
+              <button
+                onClick={() => handleClick("#contact")}
+                className="btn-primary w-full mt-3"
+              >
+                {t.hero.ctaContact}
+              </button>
             </div>
           </motion.div>
         )}

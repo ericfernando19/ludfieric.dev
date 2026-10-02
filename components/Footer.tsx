@@ -17,19 +17,24 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="border-t border-border dark:border-zinc-800">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <footer className="border-t border-border dark:border-white/10">
+      <div className="mx-auto max-w-7xl px-5 py-10 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
-          <p className="text-sm text-muted dark:text-zinc-500 text-center md:text-left">
-            &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. {t.footer.copyright}
-          </p>
+          <div className="flex items-center gap-2.5">
+            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary-dark text-xs font-black text-white">
+              LE
+            </span>
+            <p className="text-sm text-muted dark:text-steel-dark">
+              &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. {t.footer.copyright}
+            </p>
+          </div>
 
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-muted dark:text-zinc-500 hover:text-primary dark:hover:text-terracotta transition-colors"
+                className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted transition-colors hover:text-primary dark:text-steel-dark dark:hover:text-primary-light"
               >
                 {link.label}
               </a>

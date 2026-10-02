@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar"
+import MotionProvider from "@/components/MotionProvider"
 import Hero from "@/components/Hero"
+import LogoStrip from "@/components/LogoStrip"
 import About from "@/components/About"
 import Skills from "@/components/Skills"
 import Portfolio from "@/components/Portfolio"
@@ -10,10 +12,11 @@ import Footer from "@/components/Footer"
 
 export default function Home() {
   return (
-    <>
+    <MotionProvider>
       <Navbar />
       <main>
         <Hero />
+        <LogoStrip />
         <About />
         <Skills />
         <Portfolio />
@@ -22,6 +25,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </MotionProvider>
   )
 }

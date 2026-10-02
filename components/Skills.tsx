@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { SKILLS } from "@/lib/data"
 import { useLang } from "./LanguageProvider"
+import { SectionHeading } from "./SectionHeading"
 
 const categoryKeys = ["frontend", "backend", "database", "mobile", "tools"] as const
 const categoryLabels: Record<string, keyof ReturnType<typeof useLang>["t"]["skills"]> = {
@@ -41,69 +42,57 @@ export default function Skills() {
   const { t } = useLang()
 
   return (
-    <section id="skills" className="relative py-24 md:py-32">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-12 gap-12 md:gap-8">
-          {/* Left: label */}
-          <div className="md:col-span-3">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5 }}
-            >
-              <span className="text-sm font-medium tracking-[0.2em] uppercase text-primary dark:text-terracotta">
-                {t.skills.heading}
-              </span>
-              <p className="text-sm text-muted dark:text-zinc-500 mt-3 max-w-[200px]">
-                {t.skills.subtitle}
-              </p>
-            </motion.div>
-          </div>
+    <section id="skills" className="band-alt relative py-24 md:py-32">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <SectionHeading
+          title={
+            <>
+              {t.skills.titleA}
+              <span className="text-primary dark:text-primary-light">{t.skills.titleB}</span>
+            </>
+          }
+          subtitle={t.skills.subtitle}
+        />
 
-          {/* Right: skills */}
-          <div className="md:col-span-9 space-y-10">
-            {categoryKeys.map((cat, catIdx) => {
-              const skills = SKILLS.filter((s) => s.category === cat)
-              const label = t.skills[categoryLabels[cat]]
-              return (
-                <motion.div
-                  key={cat}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.4, delay: catIdx * 0.06 }}
-                >
-                  <h3 className="text-xs font-semibold text-muted dark:text-zinc-500 uppercase tracking-[0.15em] mb-4">
-                    {label}
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {skills.map((skill) => {
-                      const icon = skillIcons[skill.name]
-                      return (
-                        <span
-                          key={skill.name}
-                          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-zinc-100 dark:bg-white/5 text-secondary dark:text-zinc-300 border border-transparent hover:border-primary/30 dark:hover:border-terracotta/30 hover:text-primary dark:hover:text-terracotta transition-colors cursor-default"
-                        >
-                          {icon && (
-                            <img
-                              src={icon.src}
-                              alt=""
-                              aria-hidden
-                              className={`w-4 h-4 shrink-0 ${
-                                icon.invert ? "dark:invert" : ""
-                              }`}
-                            />
-                          )}
-                          {skill.name}
-                        </span>
-                      )
-                    })}
-                  </div>
-                </motion.div>
-              )
-            })}
-          </div>
+        <div className="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-9">
+          {categoryKeys.map((cat, catIdx) => {
+            const skills = SKILLS.filter((s) => s.category === cat)
+            const label = t.skills[categoryLabels[cat]]
+            return (
+              <motion.div
+                key={cat}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.4, delay: catIdx * 0.06 }}
+              >
+                <h3 className="mb-4 text-[11px] font-bold uppercase tracking-[0.18em] text-primary dark:text-primary-light">
+                  {label}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {skills.map((skill) => {
+                    const icon = skillIcons[skill.name]
+                    return (
+                      <span
+                        key={skill.name}
+                        className="inline-flex cursor-default items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-secondary transition-colors hover:border-primary/40 hover:text-primary dark:border-white/10 dark:bg-white/5 dark:text-steel dark:hover:border-primary-light/40 dark:hover:text-primary-light"
+                      >
+                        {icon && (
+                          <img
+                            src={icon.src}
+                            alt=""
+                            aria-hidden="true"
+                            className={`h-4 w-4 shrink-0 ${icon.invert ? "dark:invert" : ""}`}
+                          />
+                        )}
+                        {skill.name}
+                      </span>
+                    )
+                  })}
+                </div>
+              </motion.div>
+            )
+          })}
         </div>
       </div>
     </section>

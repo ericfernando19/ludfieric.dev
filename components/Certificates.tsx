@@ -5,14 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
 import { CERTIFICATES } from "@/lib/data"
 import { useLang } from "./LanguageProvider"
-
-const categoryColors: Record<string, string> = {
-  "Mobile Development": "bg-blue-500",
-  "Studi Independen": "bg-emerald-500",
-  Programming: "bg-purple-500",
-  Database: "bg-pink-500",
-  AI: "bg-violet-500",
-}
+import { SectionHeading } from "./SectionHeading"
 
 export default function Certificates() {
   const { t } = useLang()
@@ -23,7 +16,7 @@ export default function Certificates() {
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return
-    const amount = 280
+    const amount = 300
     scrollRef.current.scrollBy({
       left: direction === "left" ? -amount : amount,
       behavior: "smooth",
@@ -33,136 +26,85 @@ export default function Certificates() {
   return (
     <>
       <section id="certificates" className="relative py-24 md:py-32">
-        <div className="w-full px-5 sm:px-6 lg:px-8">
-          {/* Mobile: stacked layout */}
-          <div className="md:hidden mb-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5 }}
-            >
-              <span className="text-sm font-medium tracking-[0.2em] uppercase text-primary dark:text-terracotta">
-                {t.certificates.heading}
-              </span>
-              <p className="text-sm text-muted dark:text-zinc-500 mt-2">
-                {t.certificates.subtitle}
-              </p>
-            </motion.div>
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <SectionHeading
+              eyebrow={t.certificates.heading}
+              title={
+                <>
+                  {t.certificates.titleA}
+                  <span className="text-primary dark:text-primary-light">
+                    {t.certificates.titleB}
+                  </span>
+                </>
+              }
+              subtitle={t.certificates.subtitle}
+            />
+            <div className="mb-1 flex gap-2">
+              <button
+                onClick={() => scroll("left")}
+                className="btn-icon !h-10 !w-10"
+                aria-label={t.certificates.prev}
+              >
+                <ChevronLeft size={16} />
+              </button>
+              <button
+                onClick={() => scroll("right")}
+                className="btn-icon !h-10 !w-10"
+                aria-label={t.certificates.next}
+              >
+                <ChevronRight size={16} />
+              </button>
+            </div>
           </div>
 
-          {/* Desktop: grid layout */}
-          <div className="hidden md:grid md:grid-cols-12 md:gap-8 md:mb-16">
-            <div className="md:col-span-3">
+          <div
+            ref={scrollRef}
+            className="mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {CERTIFICATES.map((cert, i) => (
               <motion.div
+                key={cert.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.4, delay: i * 0.04 }}
+                className="card-surface group w-[250px] flex-none snap-start overflow-hidden p-3 sm:w-[270px]"
               >
-                <span className="text-sm font-medium tracking-[0.2em] uppercase text-primary dark:text-terracotta">
-                  {t.certificates.heading}
+                {cert.image && (
+                  <div
+                    className="mb-3 aspect-[4/3] cursor-pointer overflow-hidden rounded-lg bg-navy-900 dark:bg-navy-900"
+                    onClick={() => setSelectedImage(cert.image!)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault()
+                        setSelectedImage(cert.image!)
+                      }
+                    }}
+                    aria-label={`${t.certificates.enlarge} ${cert.title}`}
+                  >
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="pointer-events-none h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-primary dark:text-primary-light">
+                  {cert.category}
                 </span>
-                <p className="text-sm text-muted dark:text-zinc-500 mt-3 max-w-[200px]">
-                  {t.certificates.subtitle}
+                <h3 className="mb-1 mt-1.5 line-clamp-2 text-sm font-semibold leading-snug text-secondary dark:text-white">
+                  {cert.title}
+                </h3>
+                <p className="text-xs text-muted dark:text-steel-dark">{cert.organization}</p>
+                <p className="mt-0.5 text-xs text-muted/70 dark:text-steel-dark/80">
+                  {cert.issueDate}
                 </p>
               </motion.div>
-            </div>
-            <div className="md:col-span-9">
-              <div className="flex justify-end gap-2 mb-6">
-                <button
-                  onClick={() => scroll("left")}
-                  className="p-2.5 rounded-full border border-border dark:border-zinc-800 text-muted dark:text-zinc-400 hover:text-primary dark:hover:text-terracotta hover:border-primary/30 dark:hover:border-terracotta/30 transition-colors"
-                  aria-label={t.certificates.prev}
-                >
-                  <ChevronLeft size={16} />
-                </button>
-                <button
-                  onClick={() => scroll("right")}
-                  className="p-2.5 rounded-full border border-border dark:border-zinc-800 text-muted dark:text-zinc-400 hover:text-primary dark:hover:text-terracotta hover:border-primary/30 dark:hover:border-terracotta/30 transition-colors"
-                  aria-label={t.certificates.next}
-                >
-                  <ChevronRight size={16} />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile scroll buttons */}
-          <div className="flex md:hidden justify-end gap-2 mb-4">
-            <button
-              onClick={() => scroll("left")}
-              className="p-2 rounded-full border border-border dark:border-zinc-800 text-muted dark:text-zinc-400 hover:text-primary dark:hover:text-terracotta transition-colors"
-              aria-label={t.certificates.prev}
-            >
-              <ChevronLeft size={14} />
-            </button>
-            <button
-              onClick={() => scroll("right")}
-              className="p-2 rounded-full border border-border dark:border-zinc-800 text-muted dark:text-zinc-400 hover:text-primary dark:hover:text-terracotta transition-colors"
-              aria-label={t.certificates.next}
-            >
-              <ChevronRight size={14} />
-            </button>
-          </div>
-
-          {/* Scrollable cards */}
-          <div
-            ref={scrollRef}
-            className="flex gap-3 sm:gap-4 overflow-x-auto pb-4 snap-x snap-mandatory"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {CERTIFICATES.map((cert, i) => {
-              const dotColor = categoryColors[cert.category] || "bg-zinc-400"
-
-              return (
-                <motion.div
-                  key={cert.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.4, delay: i * 0.04 }}
-                  className="flex-none w-[240px] sm:w-[260px] md:w-[280px] snap-start overflow-hidden group"
-                >
-                  {cert.image && (
-                    <div
-                      className="aspect-[4/3] overflow-hidden bg-zinc-100 dark:bg-white/5 cursor-pointer mb-3"
-                      onClick={() => setSelectedImage(cert.image!)}
-                      role="button"
-                      tabIndex={0}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter" || e.key === " ") {
-                          e.preventDefault()
-                          setSelectedImage(cert.image!)
-                        }
-                      }}
-                      aria-label={`${t.certificates.enlarge} ${cert.title}`}
-                    >
-                      <img
-                        src={cert.image}
-                        alt={cert.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none"
-                      />
-                    </div>
-                  )}
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className={`w-1.5 h-1.5 rounded-full ${dotColor}`} />
-                    <span className="text-xs text-muted dark:text-zinc-500">
-                      {cert.category}
-                    </span>
-                  </div>
-                  <h3 className="text-sm font-semibold text-secondary dark:text-white leading-snug line-clamp-2 mb-1">
-                    {cert.title}
-                  </h3>
-                  <p className="text-xs text-muted dark:text-zinc-500">
-                    {cert.organization}
-                  </p>
-                  <p className="text-xs text-muted/60 dark:text-zinc-600 mt-0.5">
-                    {cert.issueDate}
-                  </p>
-                </motion.div>
-              )
-            })}
+            ))}
           </div>
         </div>
       </section>
@@ -174,14 +116,14 @@ export default function Certificates() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closeModal}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
           >
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 text-white/80 hover:text-white z-10 rounded-full bg-black/20 hover:bg-black/40 transition-colors"
+              className="absolute right-4 top-4 z-10 rounded-full bg-black/20 p-2 text-white/80 transition-colors hover:bg-black/40 hover:text-white sm:right-6 sm:top-6"
               aria-label="Tutup"
             >
-              <X className="w-6 h-6" />
+              <X className="h-6 w-6" />
             </button>
             <motion.img
               initial={{ scale: 0.9, opacity: 0 }}
@@ -189,7 +131,7 @@ export default function Certificates() {
               exit={{ scale: 0.9, opacity: 0 }}
               src={selectedImage}
               alt="Sertifikat diperbesar"
-              className="max-w-full max-h-[85vh] rounded-lg shadow-2xl object-contain"
+              className="max-h-[85vh] max-w-full rounded-lg object-contain shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             />
           </motion.div>

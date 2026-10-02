@@ -13,15 +13,18 @@ export const translations = {
     },
     hero: {
       title: "Ludfi Eric Fernando",
+      greeting: "Hai! Saya Ludfi.",
       subtitle: "Web Developer",
       tagline:
-        "Lulusan S1 Informatika yang membangun aplikasi web dengan Next.js, TypeScript, dan Laravel. Terbuka untuk magang maupun posisi full-time sebagai Web Developer.",
+        "Lulusan S1 Informatika yang membangun aplikasi web dengan Next.js, TypeScript, dan Laravel. Terbuka untuk magang dan full-time.",
       status: "🟢 Tersedia sekarang · Magang & Full-time · WFO / Hybrid / Remote",
       ctaProjects: "Lihat Proyek",
       ctaContact: "Hubungi Saya",
     },
     about: {
       heading: "Tentang Saya",
+      titleA: "Saya terbuka untuk",
+      titleB: "proyek web developer",
       subtitle: "Mengenal lebih dekat siapa saya dan apa yang saya lakukan.",
       description1:
         "Saya lulusan S1 Informatika Universitas Teknokrat Indonesia dengan minat di pengembangan web fullstack. Saya sudah membangun enam proyek web, di antaranya platform booking, sistem kasir restoran, dan sistem informasi sekolah, menggunakan Next.js, TypeScript, Laravel, dan database relasional.",
@@ -53,6 +56,8 @@ export const translations = {
     skills: {
       heading: "Keahlian",
       subtitle: "Teknologi dan tools yang saya kuasai.",
+      titleA: "Yang ",
+      titleB: "saya kuasai",
       frontend: "Frontend",
       backend: "Backend",
       database: "Database",
@@ -62,6 +67,8 @@ export const translations = {
     education: {
       heading: "Pendidikan & Pengalaman",
       subtitle: "Riwayat pendidikan dan pengalaman saya.",
+      titleA: "Pendidikan ",
+      titleB: "& pengalaman",
       groups: [
         {
           label: "Pendidikan",
@@ -102,12 +109,17 @@ export const translations = {
     projects: {
       heading: "Proyek",
       subtitle: "Beberapa proyek yang telah saya kerjakan.",
+      eyebrow: "Karya Saya",
+      titleA: "Proyek ",
+      titleB: "terbaru",
       demo: "Demo",
       github: "GitHub",
     },
     certificates: {
       heading: "Sertifikat",
       subtitle: "Sertifikasi profesional dan pencapaian saya.",
+      titleA: "Sertifikasi ",
+      titleB: "& pencapaian",
       prev: "Scroll kiri",
       next: "Scroll kanan",
       enlarge: "Perbesar sertifikat",
@@ -115,6 +127,8 @@ export const translations = {
     contact: {
       heading: "Hubungi Saya",
       subtitle: "Jangan ragu untuk menghubungi saya.",
+      titleA: "Jangan ragu ",
+      titleB: "menghubungi saya",
     },
     footer: {
       copyright: "All rights reserved.",
@@ -132,15 +146,18 @@ export const translations = {
     },
     hero: {
       title: "Ludfi Eric Fernando",
+      greeting: "Hi! I'm Ludfi.",
       subtitle: "Web Developer",
       tagline:
-        "Informatics graduate who builds web applications with Next.js, TypeScript, and Laravel. Open to internships and full-time positions as a Web Developer.",
+        "Informatics graduate who builds web applications with Next.js, TypeScript, and Laravel. Open to internships and full-time roles.",
       status: "🟢 Available now · Internship & Full-time · On-site / Hybrid / Remote",
       ctaProjects: "View Projects",
       ctaContact: "Get in Touch",
     },
     about: {
       heading: "About Me",
+      titleA: "I am available for",
+      titleB: "web developer projects",
       subtitle: "Get to know who I am and what I do.",
       description1:
         "I am a graduate of a Bachelor's degree in Informatics at Universitas Teknokrat Indonesia with an interest in fullstack web development. I have built six web projects, including a booking platform, a restaurant cashier system, and a school information system, using Next.js, TypeScript, Laravel, and relational databases.",
@@ -172,6 +189,8 @@ export const translations = {
     skills: {
       heading: "Skills",
       subtitle: "Technologies and tools I work with.",
+      titleA: "What ",
+      titleB: "I work with",
       frontend: "Frontend",
       backend: "Backend",
       database: "Database",
@@ -181,6 +200,8 @@ export const translations = {
     education: {
       heading: "Education & Experience",
       subtitle: "My educational and professional background.",
+      titleA: "Education ",
+      titleB: "& experience",
       groups: [
         {
           label: "Education",
@@ -221,12 +242,17 @@ export const translations = {
     projects: {
       heading: "Projects",
       subtitle: "Some of the projects I have worked on.",
+      eyebrow: "My Work",
+      titleA: "Recent ",
+      titleB: "projects",
       demo: "Demo",
       github: "GitHub",
     },
     certificates: {
       heading: "Certificates",
       subtitle: "Professional certifications and achievements.",
+      titleA: "Certifications ",
+      titleB: "& achievements",
       prev: "Scroll left",
       next: "Scroll right",
       enlarge: "Enlarge certificate",
@@ -234,6 +260,8 @@ export const translations = {
     contact: {
       heading: "Get in Touch",
       subtitle: "Feel free to reach out to me.",
+      titleA: "Feel free to ",
+      titleB: "reach out",
     },
     footer: {
       copyright: "All rights reserved.",
