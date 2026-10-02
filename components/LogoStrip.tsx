@@ -4,7 +4,7 @@ const LOGOS = [
   { src: "/skills/javascript.svg", alt: "JavaScript" },
   { src: "/skills/typescript.svg", alt: "TypeScript" },
   { src: "/skills/react.svg", alt: "React" },
-  { src: "/skills/nextjs.svg", alt: "Next.js" },
+  { src: "/skills/nextjs.svg", alt: "Next.js", darkInvert: true },
   { src: "/skills/tailwindcss.svg", alt: "Tailwind CSS" },
   { src: "/skills/bootstrap.svg", alt: "Bootstrap" },
   { src: "/skills/php.svg", alt: "PHP" },
@@ -13,7 +13,7 @@ const LOGOS = [
   { src: "/skills/postgresql.svg", alt: "PostgreSQL" },
   { src: "/skills/kotlin.svg", alt: "Kotlin" },
   { src: "/skills/git.svg", alt: "Git" },
-  { src: "/skills/github.svg", alt: "GitHub" },
+  { src: "/skills/github.svg", alt: "GitHub", darkInvert: true },
   { src: "/skills/figma.svg", alt: "Figma" },
 ]
 
@@ -32,7 +32,7 @@ export default function LogoStrip() {
               alt={logo.alt}
               width={28}
               height={28}
-              className="logo-mono h-6 w-auto sm:h-7"
+              className={`h-6 w-auto sm:h-7 ${logo.darkInvert ? "dark:invert" : ""}`}
             />
           ))}
           {LOGOS.map((logo) => (
@@ -43,7 +43,7 @@ export default function LogoStrip() {
               aria-hidden="true"
               width={28}
               height={28}
-              className="logo-mono h-6 w-auto sm:h-7"
+              className={`h-6 w-auto sm:h-7 ${logo.darkInvert ? "dark:invert" : ""}`}
             />
           ))}
         </div>

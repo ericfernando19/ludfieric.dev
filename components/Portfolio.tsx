@@ -76,8 +76,6 @@ export default function Portfolio() {
             const isExpanded = expandedIndex === i
             const hasDemo = Boolean(project.demoUrl && project.demoUrl !== "#")
             const hasGithub = Boolean(project.githubUrl && project.githubUrl !== "#")
-            const primaryUrl = hasDemo ? project.demoUrl : hasGithub ? project.githubUrl : null
-            const showGithubOutline = hasDemo && hasGithub
 
             return (
               <motion.article
@@ -121,28 +119,24 @@ export default function Portfolio() {
                   </div>
 
                   <div className="mt-auto flex justify-end gap-2 pt-5">
-                    {showGithubOutline && (
+                    {hasGithub && (
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted transition hover:border-primary hover:text-primary dark:border-white/15 dark:text-steel dark:hover:border-primary-light dark:hover:text-primary-light"
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark text-white shadow-[0_10px_24px_-10px_rgba(30,114,234,0.9)] transition hover:brightness-110 active:scale-[0.97]"
                         aria-label={`${t.projects.github}: ${project.title}`}
                       >
                         <GithubIcon className="h-4 w-4" />
                       </a>
                     )}
-                    {primaryUrl && (
+                    {hasDemo && (
                       <a
-                        href={primaryUrl}
+                        href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark text-white shadow-[0_10px_24px_-10px_rgba(30,114,234,0.9)] transition hover:brightness-110 active:scale-[0.97]"
-                        aria-label={
-                          hasDemo
-                            ? `${t.projects.demo}: ${project.title}`
-                            : `${t.projects.github}: ${project.title}`
-                        }
+                        aria-label={`${t.projects.demo}: ${project.title}`}
                       >
                         <ArrowUpRight className="h-4 w-4" />
                       </a>
